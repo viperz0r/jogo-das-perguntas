@@ -1,0 +1,230 @@
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    #app {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #question {
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4a4a4a;
+    }
+
+    #score {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 50px;
+    }
+
+    .score-box {
+      font-size: 1.5em;
+      padding: 20px;
+      background-color: #4a4a4a;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    button {
+      font-size: 1.5em;
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ddd;
+    }
+
+    #correct {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    #incorrect {
+      background-color: #f44336;
+      color: white;
+    }
+
+    #teamA {
+      background-color: orange;
+      color: white;
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      display: none;
+    }
+
+    #teamB {
+      background-color: blue;
+      color: white;
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      display: none;
+    }
+    
+    
+         #scoreboard {
+           display: flex;
+           justify-content: space-around;
+           margin-bottom: 50px;
+           padding: 20px;
+           background-color: #ddd;
+           border-radius: 10px;
+         }
+    
+        .scoreBox {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          width: 200px;
+          height: 150px;
+          border-radius: 10px;
+          padding: 20px;
+          color: white;
+        }
+    
+         #teamAScore {
+           background: linear-gradient(orange, #ff8c00);
+         }
+    
+         #teamBScore {
+           background: linear-gradient(blue, #0000cd);
+         }
+    
+         .scoreBox h2 {
+           margin: 0;
+         }
+    
+         .scoreBox p {
+           font-size: 48px;
+           margin: 0;
+         }
+        #startButton {
+          font-size: 24px;
+          padding: 10px 20px;
+          cursor: pointer;
+        }
+                .bounce-animation {
+                  animation: bounce 0.5s infinite;
+                }
+        
+                @keyframes bounce {
+        
+                  0%,
+                  100% {
+                    transform: translateY(0);
+                  }
+        
+                  50% {
+                    transform: translateY(-20px);
+                  }
+                }
+                
+                
+        @keyframes rubberBand {
+          0% {
+            transform: scale(1);
+          }
+    
+          30% {
+            transform: scale(1.25) rotate(-3deg);
+          }
+    
+          40% {
+            transform: scale(0.75) rotate(3deg);
+          }
+    
+          50% {
+            transform: scale(1.15) rotate(-3deg);
+          }
+    
+          65% {
+            transform: scale(0.95) rotate(3deg);
+          }
+    
+          75% {
+            transform: scale(1.05) rotate(-3deg);
+          }
+    
+          100% {
+            transform: scale(1);
+          }
+        }
+        
+        
+        
+                .rubberBand-animation {
+                  animation: rubberBand 1s;
+                  transform-origin: center;
+                }
+                
+.winner-message {
+  font-size: 42px;
+  font-weight: bold;
+  color: orange;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: -2px -2px 4px rgba(0, 0, 0, 0.5),
+    2px -2px 4px rgba(0, 0, 0, 0.5),
+    -2px 2px 4px rgba(0, 0, 0, 0.5),
+    2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+@font-palette-values --Grays {
+  font-family: Rocher;
+  base-palette: 9;
+}
+
+@font-palette-values --Purples {
+  font-family: Rocher;
+  base-palette: 6;
+}
+
+@font-palette-values --Mint {
+  font-family: Rocher;
+  base-palette: 7;
+}
+
+.grays {
+  font-palette: --Grays;
+}
+
+.purples {
+  font-palette: --Purples;
+}
+
+.mint {
+  font-palette: --Mint;
+}
+
+@font-face {
+  font-family: 'Rocher';
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Jogo de Perguntas</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/party-js@2.2.0/bundle/party.min.js"></script>
+
+</head>
+
+<body id ="body">
+  <div id="scoreboard">
+    <div id="teamAScore" class="scoreBox">
+      <h2>Equipa A</h2>
+      <p id="scoreA">0</p>
+    </div>
+    <div id="questionCount" class="scoreBox">
+      <h2>Pergunta</h2>
+      <p id="currentQuestion">1 / 4</p>
+    </div>
+    <div id="teamBScore" class="scoreBox">
+      <h2>Equipa B</h2>
+      <p id="scoreB">0</p>
+    </div> 
+  </div>
+
+  <h1 id="question"></h1>
+
+  <button id="correct" onclick="answerQuestion(true)">Certo</button>
+  <button id="incorrect" onclick="answerQuestion(false)">Errado</button>
+  <button id="teamA" onclick="answerTiebreaker('A')">Equipa A</button>
+  <button id="teamB" onclick="answerTiebreaker('B')">Equipa B</button>
+
+  <button id="startButton" onclick="startGame()">Iniciar Jogo</button>
+  
+  <div id="winnerContainer">
+
+  </div>
+
+  <script src="game.js"></script>
+</body>
+
+</html>
